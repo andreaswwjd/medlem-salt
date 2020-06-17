@@ -1,0 +1,44 @@
+{
+  "name": "medlem.salt",
+  "version": "1.0.0",
+  "description": "Salt medlemsregister.",
+  "author": "Andreas Lundström &lt;andreas@cogitari.se&gt;",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+    "build": "nuxt build",
+    "start": "cross-env NODE_ENV=production node server/index.js",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/auth": "^4.8.4",
+    "@nuxtjs/axios": "^5.6.0",
+    "body-parser": "^1.19.0",
+    "bookshelf": "^1.0.1",
+    "bookshelf-uuid": "^1.0.1",
+    "bookshelf-virtuals-plugin": "^0.1.1",
+    "bulma": "^0.8.0",
+    "bulma-calendar": "^6.0.7",
+    "bulma-extensions": "^6.2.7",
+    "cookie-parser": "^1.4.4",
+    "cross-env": "^5.2.0",
+    "crypto": "^1.0.1",
+    "dotenv": "^8.1.0",
+    "ejs": "^2.7.1",
+    "express": "^4.16.4",
+    "express-jwt": "^5.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.19.5",
+    "mysql": "^2.17.1",
+    "node-sass": "^4.12.0",
+    "nuxt": "^2.0.0",
+    "path-to-regexp": "^3.1.0",
+    "puppeteer": "^2.0.0",
+    "sass-loader": "^8.0.0",
+    "vue-check-view": "^0.3.0",
+    "vue-scroll": "^2.1.12"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}

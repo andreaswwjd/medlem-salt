@@ -1,0 +1,4 @@
+-- ME/_id
+-- 1. Kolla så användaren är vår kontakt.
+-- 2. Lista medlemsinfo. 
+-- 3. Uppdatera medlemsinfo med 'medlem'-token.

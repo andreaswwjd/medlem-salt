@@ -1,0 +1,205 @@
+
+  // @import "../assets/spectre/spectre-icons.scss";
+  // @import "../assets/spectre/_forms.scss";
+  @charset "utf-8";
+
+  @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300i|Source+Sans+Pro');
+
+
+  // Set initial values
+  $size-7: 0.6rem;
+  $gap: 32px;
+  $easing: cubic-bezier(0.4, 0, 0, 1);
+
+  // Colors
+  $main: #1D4189;
+  $main-secondary: #BCDBF0;
+  $scout: #744641;
+  $scout-secondary: #A78C83;
+  $bluedim: #5F7884;
+  $bluedim-secondary: #AACAD2;
+  $green: #7AB853;
+  $green-secondary: #BCD89C;
+  $yellowdim: #E6CE6D;
+  $yellowdim-secondary: #FFEAAE;
+  $yellow: #E6C700;
+  $yellow-secondary: #FFE67D;
+  $red: #EB6D08;
+  $red-secondary: #F39F60;
+  $redwine: #D02724;
+  $redwine-secondary: #E57575;
+  $rose: #BE5374;
+  $rose-secondary: #E3ACAC;
+  $purple: #985E9B;
+  $purple-secondary: #73759D;
+  
+  $red-gradient: linear-gradient(135deg, $yellowdim-secondary 0%, $red-secondary 50%, $redwine-secondary 100%);
+  $green-gradient: linear-gradient(135deg, $green-secondary 0%, $bluedim-secondary 100%);
+  // Set colors
+    $primary: $main-secondary;
+    $link: $purple-secondary;
+    $info: $bluedim;
+    $success: $green;
+    $warning: $yellowdim;
+    $danger: $red;
+
+    // $dark: $grey-darker;
+    // $text: $grey-dark;
+    // $background: $white-ter;
+    // $link: red;
+    
+    // $colors: mergeColorMaps(
+      // ("white": ($white, $black), 
+      // "black": ($black, $white), 
+      // "light": ($light, $light-invert), 
+      // "dark": ($dark, $dark-invert), 
+      // "primary": ($primary, $primary-invert, $primary-light, $primary-dark), 
+      // "link": ($link, $link-invert, $link-light, $link-dark), 
+      // "info": ($info, $info-invert, $info-light, $info-dark), 
+      // "success": ($success, $success-invert, $success-light, $success-dark), 
+      // "warning": ($warning, $warning-invert, $warning-light, $warning-dark), 
+      // "danger": ($danger, $danger-invert, $danger-light, $danger-dark)
+      // ), $custom-colors)
+
+  // Update Bulma's global variables
+  $family-sans-serif: "Source Sans Pro", sans-serif;
+  $family-primary: $family-sans-serif;
+  // $grey-dark: $brown;
+  // $grey-light: $beige-light;
+  // $primary: $purple;
+  // $link: $pink;
+  $widescreen-enabled: false;
+  $fullhd-enabled: false;
+
+  // Update some of Bulma's component variables
+  // $body-background-color: $red-gradient;
+  // $control-border-width: 2px;
+  $input-border-color: transparent;
+  $input-shadow: none;
+
+  // @import "bulma";
+  // @import '~bulma-calendar';
+  // @import '~bulma-extensions';
+  @import "../fontawesome/fontawesome.scss";
+  @import "../fontawesome/solid.scss";
+  @import "../bulma/bulma.sass";
+
+  html {
+    // background: $yellowdim-secondary;
+    // background: $green-gradient;
+    background: $red-gradient;
+    margin: 0;
+    // padding: 0 .5rem;
+  }
+
+  html, body, #__nuxt, #__layout {
+    height: 100%;
+    width: 100%;
+  }
+
+  .scrollbox {
+    padding: 0 .5rem;
+    .mainbox {
+      @extend .box;
+      height: auto;
+      min-height: calc(100vh - 1rem);
+      margin: .5rem auto;
+      border-radius: 1em;
+      overflow: hidden;
+    }
+  }
+
+  .styledbox {
+    background-image: url(/blob.svg);
+    background-size: 100% 100%;
+  }
+
+  nav.navbar {
+    padding: 1rem;
+    align-items: center;
+    flex-direction: column;
+    margin: 1.5rem 0;
+    .navbar-center {
+      flex-grow: 1;
+      flex-direction: column;
+      justify-content: center;
+      display: flex;
+      // text-align: center;
+      .icon {
+        font-size: 0.7em;
+      }
+    }
+  }
+
+  body {
+    font-size: 14px;
+    word-spacing: 1px;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  .maincontent {
+    padding: 1rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    html {
+      .scrollbox {
+        padding: 0 1.5rem;
+        max-width: 1216px;
+        margin: 0 auto;
+        .mainbox {
+          border-radius: 2em;
+          margin: 1.5rem auto 1.5rem auto;
+          min-height: calc(100vh - 3rem);
+          .maincontent {
+            padding: 1.5rem 3rem;
+          }
+        }
+      }
+      nav.navbar {
+        min-height: calc(100vh - 6rem);
+        border-right: solid 1px $grey-light;
+        border-bottom: none;
+      }
+    }
+  }
+
+
+  h1, h2, h3, h4, h5, h6, .title {
+    font-family: 'Josefin Sans';
+    font-weight: 300;
+    font-style: italic;
+  }
+  .title {
+    font-size: 2.7rem;
+    margin-top: 2rem;
+  }
+
+  .tag:not(body) {
+    @extend .is-rounded;
+    &.is-small {
+      font-size: 0.7rem;
+    }
+    &.is-normal {
+      font-size: 1rem;
+    }
+  }
+
+  .breadcrumb {
+    li:last-child {
+      @extend .is-active;
+    }
+  }
+
+

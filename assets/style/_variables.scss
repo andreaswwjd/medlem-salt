@@ -1,0 +1,42 @@
+// Colors
+
+$black: #262626;
+$white: #fdfdfd;
+// $white: #f2f2f2;
+// $white: #eeeeee;
+$color1: #fa6048;
+$color2: #fdeddb;
+$color3: #fede76;
+$color4: #7c8eaf;
+
+
+.bg-white {
+  background: $white;
+  color: $black;
+}
+.bg-black {
+  background: $black;
+  color: $white;
+}
+.bg-color1 { background: $color1; color: $white; }
+.bg-color2 { background: $color2; color: $black; }
+.bg-color3 { background: $color3; color: $white; }
+.bg-color4 { background: $color4; color: $white; }
+
+.bg-color1-light { background: lighten($color1, 10%); color: $white; }
+.bg-color2-light { background: lighten($color2, 10%); color: $black; }
+.bg-color3-light { background: lighten($color3, 10%); color: $white; }
+.bg-color4-light { background: lighten($color4, 10%); color: $white; }
+
+.bg-color1-dark { background: desaturate(darken($color1, 5%), 20%); color: $white; }
+.bg-color2-dark { background: darken($color2, 10%); color: $black; }
+.bg-color3-dark { background: darken($color3, 10%); color: $white; }
+.bg-color4-dark { background: darken($color4, 10%); color: $white; }
+
+
+
+// Typography
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300i|Source+Sans+Pro&display=swap');
+
+$font: 'Josefin Sans', sans-serif;

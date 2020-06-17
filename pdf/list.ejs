@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <title>Medlemslista</title>
+</head>
+<body>
+  <h1 class="title">Medlemslista</h1>
+  <table class="members-table table is-hoverable is-fullwidth" style="font-size: 12px;">
+    <thead>
+      <tr>
+        <th>
+          <p>Personnummer</p>
+        </th>
+        <th>
+          <p>Namn</p>
+        </th>
+        <th>
+          <p>Epost</p>
+        </th>
+        <th>
+          <p>Telefon</p>
+        </th>
+        <!-- <th>Grupp ({{group.members && group.members.length == 1 ?'1 medlem': group.members.length+' medlemmar'}})</th> -->
+        <th>
+          <p>
+            Ålder
+          </p>
+        </th>
+        <th colspan="3">
+  
+  
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% members.concat(members).forEach(function(member){ %>
+        <tr class="fadeup-item">
+          <td><%= member.pnr.substr(0,8) %>-<%= member.pnr.substr(8,4) %></td>
+          <td><p><%= member.firstname %> <%= member.lastname %></p></td>
+          <td><a href="mailto:<%= member.email %>"><%= member.email %></a></td>
+          <td title="Kontakt via målsman"><%= member.tel %><span style="color: red;">*</span></td>
+          <td><%= member.age %> år</td>
+          <td>
+          </td>
+          <!-- <td>
+            <div class="tags">
+              <% member.tags.forEach(function(tag){ %>
+                <span class="tag" style="background-color: <%= tag.color %>"><%= tag.name %></span>
+              <% }); %>
+              <% member.attended_at.forEach(function(tag){ %>
+                <span class="tag" style="
+                border-top-color: #BCD89C;
+                border-bottom-color: #BCD89C;
+                border-left-color: #BCD89C;
+                border-right-color: #BCD89C;
+                border: 1px solid;"><%= tag.name %></span>
+              <% }); %>
+              <% member.roles.forEach(function(tag){ %>
+                <span class="tag"><%= tag.name %></span>
+              <% }); %>
+            </div>
+          </td> -->
+          <td>
+            <i class="fas <%= !member.kontakt_via_målsman ? 'fa-check' : 'fa-times-circle' %>" style="color: <%= !member.kontakt_via_målsman ? 'lightgray' : 'indianred' %>"></i>
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</body>
+</html>
