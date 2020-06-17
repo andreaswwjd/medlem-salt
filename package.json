@@ -1,7 +1,7 @@
 {
-  "name": "medlem.salt",
+  "name": "medlem-salt",
   "version": "1.0.0",
-  "description": "Salt medlemsregister.",
+  "description": "Medlemsregister",
   "author": "Andreas Lundström &lt;andreas@cogitari.se&gt;",
   "private": true,
   "scripts": {
